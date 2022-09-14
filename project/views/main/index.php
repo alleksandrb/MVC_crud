@@ -300,86 +300,87 @@
             </div>
         </div>
     </div>
-
-
-<div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-            Прайс-лист операторов
-        </button>
-    </h2>
-    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-        <div class="accordion-body">
-            <div class="statistic mt-5">
-                <div class="statistic_table_buttons buttons_block">
-                    <button id="users_statistic_button" type="button" class="btn btn-info">Посмотреть статистику звонков пользователя</button>
-                    <button id="operator_statistic_button" type="button" class="btn btn-info">Количество звонков совершенных оператором за день</button>
-                </div>
-                <div class="users_statistic_block block_forms_common_styles">
-                    <form id="users_statistic_form">
-                        <div class="row">
-                            <div class="col">
-                                <label for="start_period" class="form-label">Начало периода</label>
-                                <input type="text" class="form-control mask_period" name ="start_period">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                Статистика
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+            <div class="accordion-body">
+                <div class="statistic mt-5">
+                    <div class="statistic_table_buttons buttons_block">
+                        <button id="users_statistic_button" type="button" class="btn btn-info">Посмотреть статистику звонков пользователя</button>
+                        <button id="operator_statistic_button" type="button" class="btn btn-info">Количество звонков совершенных оператором за день</button>
+                    </div>
+                    <div class="users_statistic_block block_forms_common_styles">
+                        <form id="users_statistic_form">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="start_period" class="form-label">Начало периода</label>
+                                    <input type="text" class="form-control mask_period" name ="start_period">
+                                </div>
+                                <div class="col">
+                                    <label for="end_period" class="form-label">Конец период</label>
+                                    <input type="text" class="form-control mask_period" name ="end_period">
+                                </div>
                             </div>
-                            <div class="col">
-                                <label for="end_period" class="form-label">Конец период</label>
-                                <input type="text" class="form-control mask_period" name ="end_period">
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <button id="user_statistic" type="submit" class="btn btn-success">Показать</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col">
-                                <button id="user_statistic" type="submit" class="btn btn-success">Показать</button>
+                        </form>
+                        <table class="table table-hover caption-top ">
+                            <caption>Статистика за период</caption>
+                            <thead class="table-light ">
+                                <tr class="table-primary">
+                                    <th scope="col">Имя</th>
+                                    <th scope="col">Сумма потраченная за период, коп.</th>
+                                    <th scope="col">Продолжительность разговоров, сек</th>
+                                </tr>
+                            </thead>
+                            <tbody id="user_statistic_table_tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="operator_statistic_block block_forms_common_styles">
+                        <form id="operator_statistic_form" class="mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="operator" class="form-label">Oператор</label>
+                                    <select name="operator" id="statistic_operator_name" class="form-select">
+                                        <?php foreach ($operators as $id => $name):?>
+                                            <option value="<?=$id?>"><?=$name?></option>
+                                        <?php endforeach;?>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="selected_day" class="form-label">День</label>
+                                    <input type="text" class="form-control mask_period" name ="selected_day">
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                    <table class="table table-hover caption-top ">
-                        <caption>Статистика за период</caption>
-                        <thead class="table-light ">
-                        <tr class="table-primary">
-                            <th scope="col">Имя</th>
-                            <th scope="col">Сумма потраченная за период, коп.</th>
-                            <th scope="col">Продолжительность разговоров, сек</th>
-                        </tr>
-                        </thead>
-                        <tbody id="user_statistic_table_tbody">
-                        </tbody>
-                    </table>
-                </div>
-                <div class="operator_statistic_block block_forms_common_styles">
-                    <form id="operator_statistic_form" class="mb-3">
-                        <div class="row">
-                            <div class="col">
-                                <label for="operator" class="form-label">Oператор</label>
-                                <select name="operator" id="statistic_operator_name" class="form-select">
-                                    <?php foreach ($operators as $id => $name):?>
-                                        <option value="<?=$id?>"><?=$name?></option>
-                                    <?php endforeach;?>
-                                </select>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <button id="operator_statistic" type="submit" class="btn btn-success">Показать</button>
+                                </div>
                             </div>
-                            <div class="col">
-                                <label for="selected_day" class="form-label">День</label>
-                                <input type="text" class="form-control mask_period" name ="selected_day">
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <button id="operator_statistic" type="submit" class="btn btn-success">Показать</button>
-                            </div>
-                        </div>
-                    </form>
-                    <table class="table table-hover w-50">
-                        <thead class="table-light ">
-                            <tr class="table-primary">
-                                <th scope="col">Количество звонков совершенных за день</th>
-                            </tr>
-                        </thead>
-                        <tbody id="operator_statistic_table_tbody">
-                            <tr>
-                                <td id="days_count"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        </form>
+                        <table class="table table-hover w-50">
+                            <thead class="table-light ">
+                                <tr class="table-primary">
+                                    <th scope="col">Количество звонков совершенных за день</th>
+                                </tr>
+                            </thead>
+                            <tbody id="operator_statistic_table_tbody">
+                                <tr>
+                                    <td id="days_count"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
 </div>
