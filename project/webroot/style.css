@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main{
+    flex: 1 0 auto;
+    padding: 20px 0;
+}
+header, footer{
+    flex: 0 0 auto;
+}
+.footer{
+    height: 50px;
+}
+.header, .footer{
+    padding: 10px 0;
+    background-color: #27377e;
+    color: white;
+}
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo{
+    width: 170px;
+    height: 50px;
+}
+.header_logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.journal_table, .user_table, .operator_price_table{
+    margin-bottom: 40px;
+}
+.buttons_block{
+    margin-top: 30px;
+}
+.block_forms_common_styles{
+    display: none;
+    margin-top: 35px;
+    width: 70%;
+}
+.journal_remove_table_forms, .user_remove_table_forms, .remove_operator_block, .add_new_operator_block{
+    width: 30%;
+}
+.active{
+    display: block;
+}
+
