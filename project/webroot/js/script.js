@@ -49,10 +49,9 @@ document.addEventListener('click', (e) =>{
     }
 
 
-
     //отправка форм
 
-    //журнал вызовов
+    //Журнал вызовов
     if (e.target.id === 'journal_add'){
         e.preventDefault();
         fetch('/call/add', {

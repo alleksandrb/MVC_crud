@@ -54,10 +54,15 @@ class Operator extends Model
     {
         $from = $from . ' 00:00:00';
         $to = $to . ' 00:00:00';
+        //получаем все звонки совершенные за определенный период
         $all_calls_by_period = $this->findMany("SELECT * FROM call_log WHERE start_time>=\"$from\" AND start_time<=\"$to\"");
+        //получаем всех пользователей
         $users = (new User())->getAll();
 
         $price_list_for_users = [];
+
+        //проверяем кто из пользователей совершил звонок сопоставляю элементы двух массивов по id
+        //и для каждого пользователя суммируем стоимость каждого звонка и длительность разговора
         foreach ($users as $user)
         {
             $cost = 0;

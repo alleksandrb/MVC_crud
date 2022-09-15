@@ -11,9 +11,6 @@ body {
     max-width: 950px;
     margin: 0 auto;
 }
-
-
-
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -34,7 +31,6 @@ header, footer{
     background-color: #27377e;
     color: white;
 }
-
 .header_container{
     display: flex;
     justify-content: space-between;

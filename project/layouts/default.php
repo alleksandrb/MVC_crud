@@ -20,19 +20,14 @@
             </div>
         </div>
     </header>
-
-
-
     <main>
         <div class="container">
             <?= $content ?>
         </div>
     </main>
-
-
     <footer class="footer">
         <div class="container">
-            футер сайта
+
         </div>
     </footer>
 </div>

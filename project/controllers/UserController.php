@@ -14,10 +14,13 @@ class UserController extends Controller
 
     public function addUser()
     {
+        //добавление пользователя
         if($_POST)
         {
             $telephones = (new Telephone())->getAllPhonesNumber();
             $phone_number = preg_replace('/(\D)/','', $_POST['phone_number']);
+
+            //проверка существет ли добавляемый пользователь в базе
             foreach ($telephones as $telephone)
             {
                 if($telephone['phone_number'] === $phone_number)
@@ -40,6 +43,7 @@ class UserController extends Controller
 
     public function removeUser()
     {
+        //удаление пользователя по его номеру телефона
         if ($_POST['phone_number'])
         {
             $phone_number = preg_replace('/(\D)/','', $_POST['phone_number']);
@@ -56,6 +60,7 @@ class UserController extends Controller
 
     public function updatePhoneNumber()
     {
+        //обновление номера телефона пользователя
         if($_POST['new_phone_number'] && $_POST['old_phone_number'] && $_POST['new_phone_operator'])
         {
             $new_phone_number = preg_replace('/(\D)/','', $_POST['new_phone_number']);

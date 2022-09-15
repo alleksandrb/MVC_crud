@@ -21,7 +21,6 @@ class CallController extends Controller
 
             if($sender_phone && $recipient_phone)
             {
-
                 $sender_phone = preg_replace('/(\D)/','', $sender_phone);
                 $recipient_phone = preg_replace('/(\D)/','', $recipient_phone);
 

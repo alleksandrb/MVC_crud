@@ -10,15 +10,15 @@
                 <div class="journal_table">
                     <table class="table table-hover caption-top ">
                         <thead class="table-light ">
-                            <tr class="table-primary">
-                                <th scope="col">ID</th>
-                                <th scope="col">Кто звонил</th>
-                                <th scope="col">Кому звонили</th>
-                                <th scope="col">Время начала разговора</th>
-                                <th scope="col">Время окончания разговора</th>
-                                <th scope="col">Длительность разговора</th>
-                                <th scope="col">Стоимость звонка</th>
-                            </tr>
+                        <tr class="table-primary">
+                            <th scope="col">ID</th>
+                            <th scope="col">Кто звонил</th>
+                            <th scope="col">Кому звонили</th>
+                            <th scope="col">Время начала разговора</th>
+                            <th scope="col">Время окончания разговора</th>
+                            <th scope="col">Длительность разговора</th>
+                            <th scope="col">Стоимость звонка</th>
+                        </tr>
                         </thead>
                         <tbody>
                         <?php foreach ($calls as $call):?>
@@ -97,12 +97,12 @@
                 <div class="user_table">
                     <table class="table table-hover caption-top ">
                         <thead class="table-light ">
-                            <tr class="table-primary">
-                                <th scope="col">ID</th>
-                                <th scope="col">Имя</th>
-                                <th scope="col">Телефон</th>
-                                <th scope="col">Оператор</th>
-                            </tr>
+                        <tr class="table-primary">
+                            <th scope="col">ID</th>
+                            <th scope="col">Имя</th>
+                            <th scope="col">Телефон</th>
+                            <th scope="col">Оператор</th>
+                        </tr>
                         </thead>
                         <tbody>
                         <?php foreach ($users as $user):?>
@@ -210,11 +210,11 @@
                 <div class="operator_price_table">
                     <table class="table table-hover caption-top ">
                         <thead class="table-light ">
-                            <tr class="table-primary">
-                                <th scope="col">Оператор совершающий вызов</th>
-                                <th scope="col">Оператор принимающий вызов</th>
-                                <th scope="col">Стоимость за минуту, коп.</th>
-                            </tr>
+                        <tr class="table-primary">
+                            <th scope="col">Оператор совершающий вызов</th>
+                            <th scope="col">Оператор принимающий вызов</th>
+                            <th scope="col">Стоимость за минуту, коп.</th>
+                        </tr>
                         </thead>
                         <tbody>
                         <?php foreach ($operators_price_list as $operator_price):?>
@@ -308,8 +308,8 @@
         </h2>
         <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
             <div class="accordion-body">
-                <div class="statistic mt-5">
-                    <div class="statistic_table_buttons buttons_block">
+                <div class="statistic mt-1">
+                    <div class="statistic_table_buttons">
                         <button id="users_statistic_button" type="button" class="btn btn-info">Посмотреть статистику звонков пользователя</button>
                         <button id="operator_statistic_button" type="button" class="btn btn-info">Количество звонков совершенных оператором за день</button>
                     </div>
@@ -334,11 +334,11 @@
                         <table class="table table-hover caption-top ">
                             <caption>Статистика за период</caption>
                             <thead class="table-light ">
-                                <tr class="table-primary">
-                                    <th scope="col">Имя</th>
-                                    <th scope="col">Сумма потраченная за период, коп.</th>
-                                    <th scope="col">Продолжительность разговоров, сек</th>
-                                </tr>
+                            <tr class="table-primary">
+                                <th scope="col">Имя</th>
+                                <th scope="col">Сумма потраченная за период, коп.</th>
+                                <th scope="col">Продолжительность разговоров, сек</th>
+                            </tr>
                             </thead>
                             <tbody id="user_statistic_table_tbody">
                             </tbody>

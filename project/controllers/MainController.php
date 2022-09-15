@@ -22,9 +22,6 @@ class MainController extends Controller
         foreach ($operators as $operator)
             $operators_tmp[$operator['id']] = $operator['name'];
         $operators = $operators_tmp;
-//        echo '<pre>';
-//        var_dump($operators_tmp);
-//        echo '</pre>';
 
         return $this->render('main/index',[
             'users' => $users,
